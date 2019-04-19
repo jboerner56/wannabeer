@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <title>wannabeer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="top-header">
+                <button class="map-btn"><a href="#map1" style="color: white">Map</a></button> <button class="chart-btn"><a href="#chart" style="color: white">chart</a></button>
+        </div>
+
+        <div class="front-page">
+            <h1 class="Wannabeer" >Wannabeer</h1>
+
+            <div class="arrow-container">
+                <p><i class="arrow down"></i></p>
+            </div>
+            
+            <h2 class="welcome">Welcome Users</h2>
+        </div>
+
+        <div class="scroll-container">
+        <p class="scroll">Scroll Down</p>
+        </div>
+
+        <div class="body-container">
+            <h3 class="near-you" id="map1">Breweries Near You</h3>
+            
+            <div class="map-container">
+                <div class="map" id='map'> </div>
+            </div>
+
+            <div class="chart-container">
+                <h4 class="beer-on" id="chart">Get Your Beer On!</h4></div>
+                
+                    <p>Brewery Details</p>
+
+                <div class="list-of-brewers" data-brewery></div>
+                <div class="info" data-detail></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-btn">
+            <button class="about-btn">About US</button> <button class="contact-btn">Contact Us</button>
+            </div>
+            <p class="copy-right">&copy;Wannabeer</p>
+        </div>
+    </div>
+
+<script src="scripts/index.js"></script>
+</body>
+</html>   

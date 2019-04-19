@@ -1,0 +1,263 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+
+/* html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+} */
+
+html,
+body {
+    color: white;
+    background-image: url(../images/barrel.jpg);
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top-header {
+    background-color: #2f2f30;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 3;
+    box-shadow: 0 0 30px #161616;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.home-btn, .map-btn, .chart-btn, #map1, #chart{
+    color: white;
+    background-color: #2f2f30;
+    border: none;
+    margin-left: 20px;
+}
+.Wannabeer {
+    margin-bottom: 0;
+}
+.body-container {
+    position: relative;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #2f2f30;
+    box-shadow: 0 0 30px #161616;
+    width: 85%;
+    margin: 0 auto;
+}
+.list-of-brewers {
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0 30px #161616;
+}
+.info {
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0 30px #161616;
+    height: 300px;
+    overflow-y: scroll;
+}
+.list-of-brewers, .info {
+    margin-bottom: 20px;
+}
+.footer {
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 30px;
+    background-color: #2f2f30;
+    position: relative;
+    box-shadow: 0 0 30px #161616;
+    margin-top: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+.footer-btn {
+    width: 20%;
+    margin: 0 auto;
+}
+.welcome {
+    font-size: 50px;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+.near-you, #map1 {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.beer-on, #chart {
+    font-size: 20px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+.copy-right {
+    font-size: 25px;
+    width: 20%;
+    margin: 0 auto;
+}
+.about-btn, .contact-btn {
+    background-color: #2f2f30;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.map{
+    box-shadow: 0 0 40px #161616;
+    border-radius: 17px 17px 17px 17px;
+}
+.mapboxgl-popup-content {
+    color: black;
+}
+
+@media screen and (min-width: 360px) {
+    .body-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .map {
+        width: 100%;
+        height: 100%;
+    }
+    .map-container {
+        height: 400px;
+        width: 290px;
+        margin: 0 auto;
+    }
+    .Wannabeer {
+        font-size: 40px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    i {
+        border: solid white;
+        border-width: 0 10px 10px 0;
+        display: inline-block;
+        padding: 10px;
+    }
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .front-page {
+        margin-bottom: 130px;
+    }
+    .scroll-container {
+        display: flex;
+        justify-content: center;
+    }
+    .scroll {
+        font-size: 20px;
+    }
+    .front-page {
+        margin-top: 170px;
+    }
+    .near-you {
+        font-size: 25px;
+    }
+    .chart-container {
+        width: 290px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .map {
+        width: 100%;
+        height: 100%;
+    }
+    .map-container {
+        height: 600px;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .Wannabeer {
+        font-size: 60px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    i {
+        border: solid white;
+        border-width: 0 20px 20px 0;
+        display: inline-block;
+        padding: 20px;
+    }
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .front-page {
+        margin-bottom: 70px; 
+    }
+    .near-you {
+        font-size: 40px;
+    }
+    .chart-container {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .map {
+        width: 100%;
+        height: 100%;
+    }
+    .map-container {
+        height: 650px;
+        width: 850px;
+        margin: 0 auto;
+    }
+    .Wannabeer {
+        font-size: 90px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    i {
+        border: solid white;
+        border-width: 0 20px 20px 0;
+        display: inline-block;
+        padding: 20px;
+    }
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .front-page {
+        margin-bottom: 180px;
+    }
+    .near-you {
+        font-size: 60px;
+    }
+    .chart-container {
+        width: 850px;
+        margin: 0 auto;
+    }
+}
